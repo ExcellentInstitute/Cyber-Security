@@ -275,6 +275,11 @@
         const contentDisplay = document.getElementById('content-display');
         const sidebar = document.getElementById('main-sidebar');
 
+        // Universal Data Hook for Flutter Offline PDF Builder
+        function getCourseData() {
+            return typeof cyberBookData !== 'undefined' ? cyberBookData : null;
+        }
+
         function initApp() {
             if (typeof cyberBookData === 'undefined') {
                 contentDisplay.innerHTML = `<h2 style="color:red; text-align:center; padding:50px;">Awaiting Data File...</h2>`;
